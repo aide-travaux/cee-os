@@ -1,0 +1,77 @@
+<?php
+
+namespace AideTravaux\CEE\Os\Database\BAR;
+
+use AideTravaux\CEE\Os\Data\Entries;
+use AideTravaux\CEE\Os\Model\BAR\BAREN109 as ModelInterface;
+
+abstract class BAREN109
+{
+    /**
+     * @property string
+     */
+    const NOM = 'Réduction des apports solaires par la toiture - (France d\'outre-mer)';
+
+    /**
+     * @property string
+     */
+    const CODE = 'BAR-EN-109';
+
+    /**
+     * @property string
+     */
+    const URL = 'http://atee.fr/sites/default/files/bar-en-109_1.pdf';
+
+    /**
+     * @property string
+     */
+    const SECTEUR_APPLICATION = 'Bâtiments résidentiels existants en France d\'outre-mer';
+
+    /**
+     * @property string
+     */
+    const DENOMINATION = 'Mise en place d\'une toiture ou d\'éléments de toiture permettant la réduction des apports solaires';
+
+    /**
+     * @property int
+     */
+    const DUREE_DE_VIE_CONVENTIONNELLE = 30;
+
+    /**
+     * Retourne le montant de certificats pour les informations transmises
+     * @param ModelInterface
+     * @return float
+     */
+    public static function get(ModelInterface $model): float
+    {
+        return (float) self::getMontantForfaitaire($model) * self::getFacteur($model);
+    }
+
+    /**
+     * Retourne le montant forfaitaire de certificats en kWh cumac
+     * @param ModelInterface
+     * @return int
+     */
+    public static function getMontantForfaitaire(ModelInterface $model): int
+    {
+        switch ($model->getTypeLogement()) {
+            case Entries::TYPES_LOGEMENT['type_logement_1']:
+                return 400;
+            case Entries::TYPES_LOGEMENT['type_logement_3']:
+                return 520;
+            default:
+                return 0;
+        }
+    }
+
+    /**
+     * Surface de toiture protégée
+     * @param ModelInterface
+     * @return float
+     */
+    public static function getFacteur(ModelInterface $model): float
+    {
+        return (float) $model->getSurfaceToitureProtegee();
+    }
+
+}
