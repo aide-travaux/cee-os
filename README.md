@@ -1,12 +1,20 @@
 # Certificat d'économies d'énergie - Opérations standardisées
 
-## Description
+## Introduction
 
-Librarie PHP d'estimation du gisement de certificats d'économies d'énergie d'un projet de travaux.
+La classe CEEOS retourne toutes les informations relatives à une fiche d'opération standardisée
 
-## Valeur de retour
+## Méthodes
 
-Retourne le volume de certificats d'économies d'énergie potentiel du projet soumis
+```
+CITE::get(string $codeOs): ?string;
+```
+Retourne la classe correspondante à la fiche d'opération standardisée
+
+```
+CITE::getMontant(string $codeOs, $model): ?float;
+```
+Retourne le montant des certificats d'économies d'énergie sur la base des informations transmises
 
 ## Taux de couverture des fiches d'opérations standardisées
 
@@ -20,10 +28,10 @@ Retourne le volume de certificats d'économies d'énergie potentiel du projet so
 ## Exemple
 
 ```
-use AideTravaux\CEE\OS\Database\BAR\BAREN101;
-use AideTravaux\CEE\OS\Model\BAR\AbstractBAR as BARModel;
+use AideTravaux\CEE\OS\Model\BAR\BAREN101;
+use AideTravaux\CEE\OS\CEEOS;
 
-class Model extends BARModel
+class Model implements BAREN101
 {
     public function getZoneClimatique(): string
     {
@@ -37,9 +45,9 @@ class Model extends BARModel
 }
 
 $model = new Model();
-$result = BAREN101::get($model);
 
-echo $result;
+CEEOS::get('BAR-EN-101');
+CEEOS::getMontant('BAR-EN-101', $model);
 
 ```
 
