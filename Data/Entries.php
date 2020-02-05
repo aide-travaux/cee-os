@@ -9,6 +9,26 @@ abstract class Entries extends BaseEntries
     /**
      * @property array
      */
+    const OS_TYPES_BATIMENT = [
+        'os_type_batiment_1' => 'Bâtiments résidentiels existants',
+        'os_type_batiment_2' => 'Maisons individuelles existantes',
+        'os_type_batiment_3' => 'Appartements existants',
+        'os_type_batiment_4' => 'Maisons individuelles neuves ou existantes',
+        'os_type_batiment_5' => 'Bâtiments résidentiels collectifs existants'
+    ];
+
+    /**
+     * @property array
+     */
+    const OS_ZONES_GEOGRAPHIQUES = [
+        'os_zone_geographique_1' => 'France',
+        'os_zone_geographique_2' => 'France d\'outre-mer',
+        'os_zone_geographique_3' => 'France métropolitaine'
+    ];
+
+    /**
+     * @property array
+     */
     const ZONES_CLIMATIQUES = [
         'zone_climatique_1' => 'H1',
         'zone_climatique_2' => 'H2',

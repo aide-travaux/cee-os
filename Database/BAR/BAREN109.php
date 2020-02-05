@@ -38,6 +38,16 @@ abstract class BAREN109
     const DUREE_DE_VIE_CONVENTIONNELLE = 30;
 
     /**
+     * @property string
+     */
+    const TYPE_BATIMENT = Entries::OS_TYPES_BATIMENT['os_type_batiment_1'];
+
+    /**
+     * @property string
+     */
+    const ZONE_GEOGRAPHIQUE = Entries::OS_ZONES_GEOGRAPHIQUES['os_zone_geographique_2'];
+
+    /**
      * Retourne le montant de certificats pour les informations transmises
      * @param BARInterface
      * @return float
