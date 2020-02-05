@@ -1,9 +1,9 @@
 <?php
 
-namespace AideTravaux\CEE\Os\Tests\Database;
+namespace AideTravaux\CEE\OS\Tests\Database;
 
 use PHPUnit\Framework\TestCase;
-use AideTravaux\CEE\Os\Database\Database;
+use AideTravaux\CEE\OS\Database\Database;
 
 class DatabaseTest extends TestCase
 {

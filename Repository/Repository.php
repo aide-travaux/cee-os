@@ -1,15 +1,15 @@
 <?php
 
-namespace AideTravaux\CEE\Os\Repository;
+namespace AideTravaux\CEE\OS\Repository;
 
-use AideTravaux\CEE\Os\Database\Database;
+use AideTravaux\CEE\OS\Database\Database;
 
 abstract class Repository extends Database
 {
     /**
      * Retourne la classe correspondante au code en paramètre
      * @param string
-     * @return callable|null
+     * @return string|null
      */
     public static function getOneOrNull(string $code): ?string
     {

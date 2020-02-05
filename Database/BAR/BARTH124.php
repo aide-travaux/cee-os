@@ -1,9 +1,9 @@
 <?php
 
-namespace AideTravaux\CEE\Os\Database\BAR;
+namespace AideTravaux\CEE\OS\Database\BAR;
 
-use AideTravaux\CEE\Os\Data\Entries;
-use AideTravaux\CEE\Os\Model\BAR\BARTH124 as ModelInterface;
+use AideTravaux\CEE\OS\Data\Entries;
+use AideTravaux\CEE\OS\Model\BAR\BARTH124 as ModelInterface;
 
 abstract class BARTH124
 {

@@ -1,11 +1,11 @@
 <?php
 
-namespace AideTravaux\CEE\Os\Tests\Database;
+namespace AideTravaux\CEE\OS\Tests\Database;
 
 use PHPUnit\Framework\TestCase;
-use AideTravaux\CEE\Os\Data\Entries;
-use AideTravaux\CEE\Os\Database\BAR\BAREN104;
-use AideTravaux\CEE\Os\Model\BAR\BAREN104 as Model;
+use AideTravaux\CEE\OS\Data\Entries;
+use AideTravaux\CEE\OS\Database\BAR\BAREN104;
+use AideTravaux\CEE\OS\Model\BAR\BAREN104 as Model;
 
 class BAREN104Test extends TestCase
 {

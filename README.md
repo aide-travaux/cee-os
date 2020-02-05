@@ -20,8 +20,8 @@ Retourne le volume de certificats d'économies d'énergie potentiel du projet so
 ## Exemple
 
 ```
-use AideTravaux\CEE\Os\Database\BAR\BAREN101;
-use AideTravaux\CEE\Os\Model\BAR\AbstractBAR as BARModel;
+use AideTravaux\CEE\OS\Database\BAR\BAREN101;
+use AideTravaux\CEE\OS\Model\BAR\AbstractBAR as BARModel;
 
 class Model extends BARModel
 {

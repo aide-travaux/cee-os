@@ -1,9 +1,9 @@
 <?php
 
-namespace AideTravaux\CEE\Os\Tests\Model;
+namespace AideTravaux\CEE\OS\Tests\Model;
 
 use PHPUnit\Framework\TestCase;
-use AideTravaux\CEE\Os\Repository\Repository;
+use AideTravaux\CEE\OS\Repository\Repository;
 
 class CommonTest extends TestCase
 {

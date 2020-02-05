@@ -1,6 +1,6 @@
 <?php
 
-namespace AideTravaux\CEE\Os\Data;
+namespace AideTravaux\CEE\OS\Data;
 
 use AideTravaux\Core\Entries as BaseEntries;
 

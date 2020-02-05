@@ -1,6 +1,6 @@
 <?php
 
-namespace AideTravaux\CEE\Os\Model\BAR;
+namespace AideTravaux\CEE\OS\Model\BAR;
 
 interface BARTH112
 {
