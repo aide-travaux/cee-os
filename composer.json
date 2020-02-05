@@ -1,6 +1,6 @@
 {
     "name": "aide-travaux/cee-os",
-    "description": "Package C2E - Opérations standardisées",
+    "description": "Aide Travaux - Certificats d'économies d'énergie - Opérations standardisées",
     "type": "library",
     "license": "MIT",
     "authors": [
