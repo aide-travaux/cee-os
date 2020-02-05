@@ -5,7 +5,7 @@ namespace AideTravaux\CEE\OS\Tests\Database;
 use PHPUnit\Framework\TestCase;
 use AideTravaux\CEE\OS\Data\Entries;
 use AideTravaux\CEE\OS\Database\BAR\BAREN104;
-use AideTravaux\CEE\OS\Model\BAR\BAREN104 as Model;
+use AideTravaux\CEE\OS\Model\BARInterface;
 
 class BAREN104Test extends TestCase
 {
@@ -14,7 +14,7 @@ class BAREN104Test extends TestCase
      */
     public function testGet($model, $expect)
     {
-        $stub = $this->createMock(Model::class);
+        $stub = $this->createMock(BARInterface::class);
 
         foreach ($model as $key => $value) {
             $stub->method($key)->willReturn($value);

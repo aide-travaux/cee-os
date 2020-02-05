@@ -3,7 +3,7 @@
 namespace AideTravaux\CEE\OS\Database\BAR;
 
 use AideTravaux\CEE\OS\Data\Entries;
-use AideTravaux\CEE\OS\Model\BAR\BARTH162 as ModelInterface;
+use AideTravaux\CEE\OS\Model\BARInterface;
 
 abstract class BARTH162
 {
@@ -43,20 +43,20 @@ abstract class BARTH162
 
     /**
      * Retourne le montant de certificats pour les informations transmises
-     * @param ModelInterface
+     * @param BARInterface
      * @return float
      */
-    public static function get(ModelInterface $model): float
+    public static function get(BARInterface $model): float
     {
         return (float) self::getMontantForfaitaire($model);
     }
 
     /**
      * Retourne le montant forfaitaire de certificats en kWh cumac
-     * @param ModelInterface
+     * @param BARInterface
      * @return int
      */
-    public static function getMontantForfaitaire(ModelInterface $model): int
+    public static function getMontantForfaitaire(BARInterface $model): int
     {
         return 20900;
     }

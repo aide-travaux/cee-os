@@ -16,24 +16,4 @@ abstract class CEEOS
         return Repository::getOneOrNull($codeOS);
     }
 
-    /**
-     * Retourne le montant des certificats d'économies d'énergie
-     * @param string
-     * @param object
-     * @return string|float
-     */
-    public static function getMontant(string $codeOS, object $model): ?float
-    {
-        if ($class = self::get($codeOS)) {
-            $reflectionClass = new \ReflectionClass($class);
-            $interface = '\\' . $reflectionClass->getNamespaceName() . '\\' . $reflectionClass->getShortName();
-            $interface = \str_replace('Database', 'Model', $interface);
-
-            if (\interface_exists($interface) && $model instanceof $interface) {
-                return (float) $class::get($model);
-            }
-        }
-        return null;
-    }
-
 }

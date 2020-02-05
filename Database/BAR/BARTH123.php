@@ -3,7 +3,7 @@
 namespace AideTravaux\CEE\OS\Database\BAR;
 
 use AideTravaux\CEE\OS\Data\Entries;
-use AideTravaux\CEE\OS\Model\BAR\BARTH123 as ModelInterface;
+use AideTravaux\CEE\OS\Model\BARInterface;
 
 abstract class BARTH123
 {
@@ -40,20 +40,20 @@ abstract class BARTH123
 
     /**
      * Retourne le montant de certificats pour les informations transmises
-     * @param ModelInterface
+     * @param BARInterface
      * @return float
      */
-    public static function get(ModelInterface $model): float
+    public static function get(BARInterface $model): float
     {
         return (float) self::getMontantForfaitaire($model) * self::getFacteur($model);
     }
 
     /**
      * Retourne le montant forfaitaire de certificats en kWh cumac
-     * @param ModelInterface
+     * @param BARInterface
      * @return int
      */
-    public static function getMontantForfaitaire(ModelInterface $model): int
+    public static function getMontantForfaitaire(BARInterface $model): int
     {
         switch ($model->getZoneClimatique()) {
             case Entries::ZONES_CLIMATIQUES['zone_climatique_1']:
@@ -69,10 +69,10 @@ abstract class BARTH123
 
     /**
      * Nombre d'appartements
-     * @param ModelInterface
+     * @param BARInterface
      * @return float
      */
-    public static function getFacteur(ModelInterface $model): float
+    public static function getFacteur(BARInterface $model): float
     {
         return (float) $model->getNombreAppartements();
     }

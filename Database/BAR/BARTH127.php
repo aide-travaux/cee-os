@@ -3,7 +3,7 @@
 namespace AideTravaux\CEE\OS\Database\BAR;
 
 use AideTravaux\CEE\OS\Data\Entries;
-use AideTravaux\CEE\OS\Model\BAR\BARTH127 as ModelInterface;
+use AideTravaux\CEE\OS\Model\BARInterface;
 
 abstract class BARTH127
 {
@@ -40,20 +40,20 @@ abstract class BARTH127
 
     /**
      * Retourne le montant de certificats pour les informations transmises
-     * @param ModelInterface
+     * @param BARInterface
      * @return float
      */
-    public static function get(ModelInterface $model): float
+    public static function get(BARInterface $model): float
     {
         return (float) self::getMontantForfaitaire($model) * self::getFacteur($model);
     }
 
     /**
      * Retourne le montant forfaitaire de certificats en kWh cumac
-     * @param ModelInterface
+     * @param BARInterface
      * @return int
      */
-    public static function getMontantForfaitaire(ModelInterface $model): int
+    public static function getMontantForfaitaire(BARInterface $model): int
     {
         switch ($model->getTypeLogement()) {
             case Entries::TYPES_LOGEMENT['type_logement_1']:
@@ -127,10 +127,10 @@ abstract class BARTH127
 
     /**
      * Facteur correctif selon la surface habitable | Nombre de logements | Type d'installation
-     * @param ModelInterface
+     * @param BARInterface
      * @return float
      */
-    public static function getFacteur(ModelInterface $model): float
+    public static function getFacteur(BARInterface $model): float
     {
         switch ($model->getTypeLogement()) {
             case Entries::TYPES_LOGEMENT['type_logement_1']:
@@ -144,10 +144,10 @@ abstract class BARTH127
 
     /**
      * Facteur correctif de surface
-     * @param ModelInterface
+     * @param BARInterface
      * @return float
      */
-    public static function getFacteurSurface(ModelInterface $model): float
+    public static function getFacteurSurface(BARInterface $model): float
     {
         if ( $model->getSurfaceHabitable() < 35 ) {
             return (float) 0.3;
@@ -169,10 +169,10 @@ abstract class BARTH127
 
     /**
      * Facteur correctif selon le type d'installation
-     * @param ModelInterface
+     * @param BARInterface
      * @return float
      */
-    public static function getFacteurInstallation(ModelInterface $model): float
+    public static function getFacteurInstallation(BARInterface $model): float
     {
         switch ($model->getTypeVmcSimpleFlux()) {
             case Entries::TYPES_VMC_SIMPLE_FLUX['type_vmc_simple_flux_1']:
