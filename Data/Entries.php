@@ -2,9 +2,9 @@
 
 namespace AideTravaux\CEE\OS\Data;
 
-use AideTravaux\Core\Entries as BaseEntries;
+use AideTravaux\Core\Entries as CoreEntries;
 
-abstract class Entries extends BaseEntries
+abstract class Entries extends CoreEntries
 {
     /**
      * @property array

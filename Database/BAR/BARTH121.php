@@ -79,7 +79,7 @@ abstract class BARTH121 implements DatabaseBARInterface
      */
     public static function getFacteur(BARInterface $model): float
     {
-        return (float) $model->getNombreAppartements();
+        return (float) $model->getNombreLogements();
     }
 
 }

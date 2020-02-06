@@ -190,7 +190,7 @@ abstract class BARTH118 implements DatabaseBARInterface
                 return 
                     ($model->getTypeChauffage() === Entries::TYPES_CHAUFFAGE['type_chauffage_2']
                     && $model->getEnergieChauffage() === Entries::ENERGIES_CHAUFFAGE['energie_chauffage_2'])
-                    ? $model->getNombreAppartements() : 1
+                    ? $model->getNombreLogements() : 1
                 ;
             default:
                 return (float) 1;

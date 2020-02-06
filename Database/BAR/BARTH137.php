@@ -118,7 +118,7 @@ abstract class BARTH137 implements DatabaseBARInterface
                 }
                 return (float) 0; 
             case Entries::TYPES_LOGEMENT['type_logement_3']:
-                return (float) $model->getNombreAppartements();
+                return (float) $model->getNombreLogements();
             default:
                 return (float) 0;
         }

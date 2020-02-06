@@ -150,7 +150,7 @@ abstract class BARTH127 implements DatabaseBARInterface
             case Entries::TYPES_LOGEMENT['type_logement_1']:
                 return (float) self::getFacteurSurface($model) * self::getFacteurInstallation($model);
             case Entries::TYPES_LOGEMENT['type_logement_2']:
-                return (float) $model->getNombreAppartements() * self::getFacteurInstallation($model);
+                return (float) $model->getNombreLogements() * self::getFacteurInstallation($model);
             default:
                 return (float) 0;
         }
