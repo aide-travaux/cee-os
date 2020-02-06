@@ -7,7 +7,7 @@ La classe CEEOS retourne toutes les informations relatives à une fiche d'opéra
 ## Méthodes
 
 ```
-CITE::get(string $codeOs): ?string;
+CEEOS::get(string $codeOs): ?string;
 ```
 Retourne la classe correspondante à la fiche d'opération standardisée
 

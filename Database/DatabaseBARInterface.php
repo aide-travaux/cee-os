@@ -2,37 +2,37 @@
 
 namespace AideTravaux\CEE\OS\Database;
 
-use AideTravaux\CEE\OS\Model\DataInterface;
+use AideTravaux\CEE\OS\Model\BARInterface;
 
 /**
  * @see http://atee.fr/c2e/operations-standardisees-4eme-periode
  */
-interface DBInterface
+interface DatabaseBARInterface
 {
     /**
      * Retourne le volume de certificats d'économies d'énergie
-     * @param DataInterface
+     * @param BARInterface
      * @return float
      */
-    public static function get(DataInterface $model): float;
+    public static function get(BARInterface $model): float;
 
     /**
      * Retourne le volume forfaitaire de certificats d'économies d'énergie
-     * @param DataInterface
+     * @param BARInterface
      * @return int
      */
-    public static function getMontantForfaitaire(DataInterface $model): int;
+    public static function getMontantForfaitaire(BARInterface $model): int;
 
     /**
      * Retourne le coefficient multiplicateur calculé
-     * @param DataInterface
+     * @param BARInterface
      * @return float
      */
-    public static function getFacteur(DataInterface $model): float;
+    public static function getFacteur(BARInterface $model): float;
 
     /**
-     * @param DataInterface
+     * @param BARInterface
      * @return array
      */
-    public static function toArray(DataInterface $model): array;
+    public static function toArray(BARInterface $model): array;
 }

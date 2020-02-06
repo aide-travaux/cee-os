@@ -3,10 +3,14 @@
 namespace AideTravaux\CEE\OS\Database\BAR;
 
 use AideTravaux\CEE\OS\Data\Entries;
+use AideTravaux\CEE\OS\Database\DatabaseBARInterface;
+use AideTravaux\CEE\OS\Database\DatabaseBARTrait;
 use AideTravaux\CEE\OS\Model\BARInterface;
 
-abstract class BARTH162
+abstract class BARTH162 implements DatabaseBARInterface
 {
+    use DatabaseBARTrait;
+
     /**
      * @property string
      */
@@ -69,6 +73,14 @@ abstract class BARTH162
     public static function getMontantForfaitaire(BARInterface $model): int
     {
         return 20900;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public static function getFacteur(BARInterface $model): float
+    {
+        return (float) 1;
     }
 
 }

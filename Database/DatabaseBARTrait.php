@@ -2,14 +2,15 @@
 
 namespace AideTravaux\CEE\OS\Database;
 
-use AideTravaux\CEE\OS\DataInterface;
+use AideTravaux\CEE\OS\Model\BARInterface;
 
-trait DBTrait
+trait DatabaseBARTrait
 {
     /**
-     * @inheritdoc
+     * @param BARInterface
+     * @return array
      */
-    public static function toArray(DataInterface $model): array
+    public static function toArray(BARInterface $model): array
     {
         return [
             'nom' => self::NOM,

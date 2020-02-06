@@ -3,10 +3,14 @@
 namespace AideTravaux\CEE\OS\Database\BAR;
 
 use AideTravaux\CEE\OS\Data\Entries;
+use AideTravaux\CEE\OS\Database\DatabaseBARInterface;
+use AideTravaux\CEE\OS\Database\DatabaseBARTrait;
 use AideTravaux\CEE\OS\Model\BARInterface;
 
-abstract class BARTH160
+abstract class BARTH160 implements DatabaseBARInterface
 {
+    use DatabaseBARTrait;
+
     /**
      * @property string
      */
