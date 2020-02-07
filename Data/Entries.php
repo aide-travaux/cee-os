@@ -29,15 +29,6 @@ abstract class Entries extends CoreEntries
     /**
      * @property array
      */
-    const ZONES_CLIMATIQUES = [
-        'zone_climatique_1' => 'H1',
-        'zone_climatique_2' => 'H2',
-        'zone_climatique_3' => 'H3'
-    ];
-
-    /**
-     * @property array
-     */
     const ENERGIES_CHAUFFAGE = [
         'energie_chauffage_1' => 'Électricité',
         'energie_chauffage_2' => 'Combustible'
